@@ -1,0 +1,2 @@
+1) SELECT student.name, course.course_name FROM student JOIN course ON course.course_id = student.course_id;
+2) SELECT student.name, course.course_name FROM student JOIN course ON course.course_id = student.course_id WHERE CAST(student.age AS INTEGER) < 25;
