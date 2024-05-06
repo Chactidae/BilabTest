@@ -1,0 +1,36 @@
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
+namespace TestProject
+{
+    public class HelloWorld
+    {
+        public static void Main(string[] args) 
+        {
+            //а2b1с5а3
+            String input_text = "aaabbbcaaaa";
+            Console.WriteLine(StringCut(input_text));
+        }
+        public static String StringCut(String input_text){
+            String output_text = ""; 
+            int i = 0;
+            int j = 0;
+            while(i < input_text.Length){
+                char tempVal = input_text[i];
+                output_text += tempVal;
+                int count = 0;
+                while(i != input_text.Length && tempVal == input_text[i]){
+                    i ++;
+                    count ++;
+                }
+                output_text += count.ToString();
+            }
+            if (output_text.Length >= input_text.Length){
+                return input_text;
+            }
+            return output_text;
+        }
+    }
+}
